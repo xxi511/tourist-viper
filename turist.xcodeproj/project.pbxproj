@@ -24,6 +24,9 @@
 		5F835DBD23FD6A8100C373BA /* AttractionListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DBC23FD6A8100C373BA /* AttractionListInteractorProtocol.swift */; };
 		5F84133723FED5A300594F98 /* APIModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84133623FED5A300594F98 /* APIModule */; };
 		5F84133923FED78A00594F98 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84133823FED78A00594F98 /* Models */; };
+		5F84133B23FED8E500594F98 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84133A23FED8E500594F98 /* Utils */; };
+		5F84134023FEDD0000594F98 /* AttractionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84133E23FEDD0000594F98 /* AttractionCell.swift */; };
+		5F84134123FEDD0000594F98 /* AttractionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84133F23FEDD0000594F98 /* AttractionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 		5F835DB823FD66D700C373BA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5F835DBA23FD6A4100C373BA /* AttractionListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenterProtocol.swift; sourceTree = "<group>"; };
 		5F835DBC23FD6A8100C373BA /* AttractionListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListInteractorProtocol.swift; sourceTree = "<group>"; };
+		5F84133E23FEDD0000594F98 /* AttractionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionCell.swift; sourceTree = "<group>"; };
+		5F84133F23FEDD0000594F98 /* AttractionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F84133B23FED8E500594F98 /* Utils in Frameworks */,
 				5F84133923FED78A00594F98 /* Models in Frameworks */,
 				5F84133723FED5A300594F98 /* APIModule in Frameworks */,
 			);
@@ -118,6 +124,7 @@
 		5F835D6D23FD5CEA00C373BA /* turist */ = {
 			isa = PBXGroup;
 			children = (
+				5F84133C23FEDCD100594F98 /* Cells */,
 				5F835DA123FD5DBF00C373BA /* ViewControllers */,
 				5F835DA023FD5D4100C373BA /* AppDelegate */,
 				5F835D9F23FD5D0D00C373BA /* Storyboards */,
@@ -233,6 +240,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F84133C23FEDCD100594F98 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5F84133D23FEDCE200594F98 /* AttractionCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5F84133D23FEDCE200594F98 /* AttractionCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F84133E23FEDD0000594F98 /* AttractionCell.swift */,
+				5F84133F23FEDD0000594F98 /* AttractionCell.xib */,
+			);
+			path = AttractionCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +276,7 @@
 			packageProductDependencies = (
 				5F84133623FED5A300594F98 /* APIModule */,
 				5F84133823FED78A00594F98 /* Models */,
+				5F84133A23FED8E500594F98 /* Utils */,
 			);
 			productName = turist;
 			productReference = 5F835D6B23FD5CEA00C373BA /* turist.app */;
@@ -341,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F84134123FEDD0000594F98 /* AttractionCell.xib in Resources */,
 				5F835D7B23FD5CEC00C373BA /* LaunchScreen.storyboard in Resources */,
 				5F835D7823FD5CEC00C373BA /* Assets.xcassets in Resources */,
 				5F835D7623FD5CEA00C373BA /* Main.storyboard in Resources */,
@@ -378,6 +404,7 @@
 				5F835DB023FD5ED300C373BA /* AttractionListRouter.swift in Sources */,
 				5F835DBD23FD6A8100C373BA /* AttractionListInteractorProtocol.swift in Sources */,
 				5F835DB723FD664E00C373BA /* AttractionListVC.swift in Sources */,
+				5F84134023FEDD0000594F98 /* AttractionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +740,10 @@
 		5F84133823FED78A00594F98 /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
+		};
+		5F84133A23FED8E500594F98 /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

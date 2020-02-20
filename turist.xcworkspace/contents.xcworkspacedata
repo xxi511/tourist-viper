@@ -8,6 +8,9 @@
       location = "group:APIModule">
    </FileRef>
    <FileRef
+      location = "group:Utils">
+   </FileRef>
+   <FileRef
       location = "container:turist.xcodeproj">
    </FileRef>
 </Workspace>

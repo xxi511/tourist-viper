@@ -8,6 +8,7 @@
 
 import UIKit
 import Models
+import Utils
 
 class AttractionListVC: UIViewController {
 
@@ -18,11 +19,28 @@ class AttractionListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupUI()
         self.presenter?.fetchData(isPullToRefresh: true)
     }
     
-    func setPresenter(_ presenter: AttractionListPresenterInputProtocol) {
+    func configure(presenter: AttractionListPresenterInputProtocol) {
         self.presenter = presenter
+    }
+}
+
+// MARK: Private
+extension AttractionListVC {
+    private func setupUI() {
+        self.setupTopBar()
+        self.setupTableView()
+    }
+    
+    private func setupTopBar() {
+        self.title = "台北市熱門景點"
+    }
+    
+    private func setupTableView() {
+        self.table.tableFooterView = UIView(frame: .zero)
     }
 }
 
@@ -40,14 +58,12 @@ extension AttractionListVC: AttractionListPresenterOutputProtocol {
     }
     
     func showLoadingView() {
-        
+        LoadingPopup.show(in: self)
     }
     
     func dismissLoadingView() {
-        
+        LoadingPopup.remove(from: self)
     }
-    
-    
 }
 
 extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
@@ -60,6 +76,4 @@ extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = self.attractions[indexPath.row].info
         return cell
     }
-    
-    
 }

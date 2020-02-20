@@ -30,10 +30,14 @@ class AttractionListPresenter {
 
 extension AttractionListPresenter: AttractionListPresenterInputProtocol {
     func fetchData(isPullToRefresh: Bool) {
+        view.showLoadingView()
         if (self.attractions.count == 0) {
             interactor.fetchAttractions()
         } else {
-            self.sendReloadSignal()
+            // Simulate real http request delay
+            DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+                self.sendReloadSignal()
+            }
         }
     }
 }
@@ -44,6 +48,7 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
         let idx = self.attractions.startIndex + self.offset
         DispatchQueue.main.async {
             self.view.reloadData(data: Array(self.attractions[0..<idx]))
+            self.view.dismissLoadingView()
         }
         
     }

@@ -25,8 +25,8 @@ class AttractionListRouter: AttractionListRouterProtocol {
         let router = AttractionListRouter(view: view)
         let interactor = AttractionListInteractor()
         let presenter = AttractionListPresenter(view: view, interactor: interactor, router: router)
-        view.setPresenter(presenter)
-        interactor.setPresenter(presenter)
+        view.configure(presenter: presenter)
+        interactor.configure(presenter: presenter)
         
         return view
     }

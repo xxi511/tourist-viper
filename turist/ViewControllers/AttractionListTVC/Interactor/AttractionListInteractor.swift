@@ -16,7 +16,8 @@ class AttractionListInteractor {
     init(apiManager: ApiProtocol=ApiManager.shared) {
         self.apiManager = apiManager
     }
-    func setPresenter(_ presenter: AttractionListInteractorOutputProtocol) {
+    
+    func configure(presenter: AttractionListInteractorOutputProtocol) {
         self.presenter = presenter
     }
 }
