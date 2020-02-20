@@ -8,41 +8,41 @@
 
 import Foundation
 
-struct AttrationResult: Codable {
-    var result: Result
+public struct AttrationResult: Codable {
+    public var result: Result
     
-    struct Result: Codable {
+    public struct Result: Codable {
         var limit: Int
         var offset: Int
         var count: Int
         var sort: String
-        var results: [Attraction]
+        public var results: [Attraction]
     }
     
 }
 
-struct Attraction: Codable {
-    var info: String
-    var stitle: String
-    var xpostDate: Date
-    var longitude: Double
-    var REF_WP: Double
-    var avBegin: Date
-    var langinfo: Double
-    var MRT: String
-    var SERIAL_NO: String
-    var RowNumber: Int
-    var CAT1: String
-    var CAT2: String
-    var MEMO_TIME: String
-    var POI: String
-    var files: [URL] // wtf
-    var idpt: String
-    var latitude: Double
-    var xbody: String
-    var _id: Int
-    var avEnd: Date
-    var address: String
+public struct Attraction: Codable {
+    public var info: String
+    public var stitle: String
+    public var xpostDate: Date
+    public var longitude: Double
+    public var REF_WP: Double
+    public var avBegin: Date
+    public var langinfo: Double
+    public var MRT: String
+    public var SERIAL_NO: String
+    public var RowNumber: Int
+    public var CAT1: String
+    public var CAT2: String
+    public var MEMO_TIME: String
+    public var POI: String
+    public var files: [URL] // wtf
+    public var idpt: String
+    public var latitude: Double
+    public var xbody: String
+    public var _id: Int
+    public var avEnd: Date
+    public var address: String
     
    
 }
@@ -56,7 +56,7 @@ extension Attraction {
         case idpt, latitude, xbody, _id, avEnd, address
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let infoStr = try values.decodeIfPresent(String.self, forKey: .info)
         info = infoStr ?? ""

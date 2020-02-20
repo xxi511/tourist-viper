@@ -7,6 +7,8 @@
 //
 
 import Foundation
-protocol ApiProtocol {
+import Models
+
+public protocol ApiProtocol {
     func fetchAttraction(completeHandler: @escaping (Result<[Attraction]>) -> Void)
 }

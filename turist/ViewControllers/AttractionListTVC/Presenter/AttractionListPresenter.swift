@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Models
+
 class AttractionListPresenter {
     
     private let view: AttractionListPresenterOutputProtocol

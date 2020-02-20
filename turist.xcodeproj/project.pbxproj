@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,16 +18,12 @@
 		5F835DAD23FD5EBE00C373BA /* AttractionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DAC23FD5EBE00C373BA /* AttractionListPresenter.swift */; };
 		5F835DB023FD5ED300C373BA /* AttractionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DAF23FD5ED300C373BA /* AttractionListRouter.swift */; };
 		5F835DB223FD5EF600C373BA /* AttractionListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DB123FD5EF600C373BA /* AttractionListRouterProtocol.swift */; };
-		5F835DB523FD600000C373BA /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DB423FD600000C373BA /* Attraction.swift */; };
 		5F835DB723FD664E00C373BA /* AttractionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DB623FD664E00C373BA /* AttractionListVC.swift */; };
 		5F835DB923FD66D700C373BA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DB823FD66D700C373BA /* AppRouter.swift */; };
 		5F835DBB23FD6A4100C373BA /* AttractionListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DBA23FD6A4100C373BA /* AttractionListPresenterProtocol.swift */; };
 		5F835DBD23FD6A8100C373BA /* AttractionListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DBC23FD6A8100C373BA /* AttractionListInteractorProtocol.swift */; };
-		5F835DC023FD879A00C373BA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DBF23FD879A00C373BA /* ApiManager.swift */; };
-		5F835DC223FD889A00C373BA /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DC123FD889A00C373BA /* NetError.swift */; };
-		5F835DC423FD8AB400C373BA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DC323FD8AB400C373BA /* Api.swift */; };
-		5F835DC623FD8D3800C373BA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DC523FD8D3800C373BA /* Result.swift */; };
-		5F835DC823FD8F2000C373BA /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DC723FD8F2000C373BA /* ApiProtocol.swift */; };
+		5F84133723FED5A300594F98 /* APIModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84133623FED5A300594F98 /* APIModule */; };
+		5F84133923FED78A00594F98 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84133823FED78A00594F98 /* Models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,16 +61,10 @@
 		5F835DAC23FD5EBE00C373BA /* AttractionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenter.swift; sourceTree = "<group>"; };
 		5F835DAF23FD5ED300C373BA /* AttractionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListRouter.swift; sourceTree = "<group>"; };
 		5F835DB123FD5EF600C373BA /* AttractionListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListRouterProtocol.swift; sourceTree = "<group>"; };
-		5F835DB423FD600000C373BA /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		5F835DB623FD664E00C373BA /* AttractionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListVC.swift; sourceTree = "<group>"; };
 		5F835DB823FD66D700C373BA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5F835DBA23FD6A4100C373BA /* AttractionListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenterProtocol.swift; sourceTree = "<group>"; };
 		5F835DBC23FD6A8100C373BA /* AttractionListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListInteractorProtocol.swift; sourceTree = "<group>"; };
-		5F835DBF23FD879A00C373BA /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		5F835DC123FD889A00C373BA /* NetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
-		5F835DC323FD8AB400C373BA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		5F835DC523FD8D3800C373BA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		5F835DC723FD8F2000C373BA /* ApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F84133923FED78A00594F98 /* Models in Frameworks */,
+				5F84133723FED5A300594F98 /* APIModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +101,7 @@
 				5F835D8423FD5CEC00C373BA /* turistTests */,
 				5F835D8F23FD5CED00C373BA /* turistUITests */,
 				5F835D6C23FD5CEA00C373BA /* Products */,
+				5F84133523FED5A300594F98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,8 +118,6 @@
 		5F835D6D23FD5CEA00C373BA /* turist */ = {
 			isa = PBXGroup;
 			children = (
-				5F835DBE23FD877C00C373BA /* Network */,
-				5F835DB323FD5FDF00C373BA /* Models */,
 				5F835DA123FD5DBF00C373BA /* ViewControllers */,
 				5F835DA023FD5D4100C373BA /* AppDelegate */,
 				5F835D9F23FD5D0D00C373BA /* Storyboards */,
@@ -235,24 +226,11 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		5F835DB323FD5FDF00C373BA /* Models */ = {
+		5F84133523FED5A300594F98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F835DB423FD600000C373BA /* Attraction.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		5F835DBE23FD877C00C373BA /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				5F835DBF23FD879A00C373BA /* ApiManager.swift */,
-				5F835DC123FD889A00C373BA /* NetError.swift */,
-				5F835DC323FD8AB400C373BA /* Api.swift */,
-				5F835DC523FD8D3800C373BA /* Result.swift */,
-				5F835DC723FD8F2000C373BA /* ApiProtocol.swift */,
-			);
-			path = Network;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +249,10 @@
 			dependencies = (
 			);
 			name = turist;
+			packageProductDependencies = (
+				5F84133623FED5A300594F98 /* APIModule */,
+				5F84133823FED78A00594F98 /* Models */,
+			);
 			productName = turist;
 			productReference = 5F835D6B23FD5CEA00C373BA /* turist.app */;
 			productType = "com.apple.product-type.application";
@@ -386,21 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F835DB523FD600000C373BA /* Attraction.swift in Sources */,
 				5F835D6F23FD5CEA00C373BA /* AppDelegate.swift in Sources */,
 				5F835DAD23FD5EBE00C373BA /* AttractionListPresenter.swift in Sources */,
 				5F835DB223FD5EF600C373BA /* AttractionListRouterProtocol.swift in Sources */,
-				5F835DC223FD889A00C373BA /* NetError.swift in Sources */,
-				5F835DC023FD879A00C373BA /* ApiManager.swift in Sources */,
-				5F835DC623FD8D3800C373BA /* Result.swift in Sources */,
 				5F835DAB23FD5EAE00C373BA /* AttractionListInteractor.swift in Sources */,
-				5F835DC823FD8F2000C373BA /* ApiProtocol.swift in Sources */,
 				5F835DBB23FD6A4100C373BA /* AttractionListPresenterProtocol.swift in Sources */,
 				5F835DB923FD66D700C373BA /* AppRouter.swift in Sources */,
 				5F835D7123FD5CEA00C373BA /* SceneDelegate.swift in Sources */,
 				5F835DB023FD5ED300C373BA /* AttractionListRouter.swift in Sources */,
 				5F835DBD23FD6A8100C373BA /* AttractionListInteractorProtocol.swift in Sources */,
-				5F835DC423FD8AB400C373BA /* Api.swift in Sources */,
 				5F835DB723FD664E00C373BA /* AttractionListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,6 +704,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F84133623FED5A300594F98 /* APIModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APIModule;
+		};
+		5F84133823FED78A00594F98 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F835D6323FD5CEA00C373BA /* Project object */;
 }

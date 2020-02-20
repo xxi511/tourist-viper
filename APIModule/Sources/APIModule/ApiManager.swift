@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Models
 
-class ApiManager: ApiProtocol {
-    static let shared: ApiManager = ApiManager()
+public class ApiManager: ApiProtocol {
+    public static let shared: ApiManager = ApiManager()
     
-    func fetchAttraction(completeHandler: @escaping (Result<[Attraction]>) -> Void) {
+    public func fetchAttraction(completeHandler: @escaping (Result<[Attraction]>) -> Void) {
         let req = URLRequest(url: APIType.Attraction.url)
         self.doRequest(req) { (result) in
             switch result {

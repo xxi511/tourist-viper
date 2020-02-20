@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Models
+
 protocol AttractionListInteractorInputProtocol {
     func fetchAttractions()
 }

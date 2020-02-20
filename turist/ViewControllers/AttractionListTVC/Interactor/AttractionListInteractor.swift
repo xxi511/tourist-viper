@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import APIModule
+
 class AttractionListInteractor {
     private let apiManager: ApiProtocol
     private var presenter: AttractionListInteractorOutputProtocol?
