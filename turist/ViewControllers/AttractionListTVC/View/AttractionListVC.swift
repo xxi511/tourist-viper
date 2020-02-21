@@ -6,6 +6,7 @@
 //  Copyright © 2020 陳建佑. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Models
 import Utils
@@ -50,12 +51,10 @@ extension AttractionListVC: AttractionListPresenterOutputProtocol {
     func reloadData(data: [Attraction]) {
         let offset = self.attractions.count
         self.attractions = data
-        if (offset == 0) {
-            self.table.reloadData()
-        } else {
-            let paths = (offset..<data.count).map({IndexPath(row: $0, section: 0)})
-            self.table.reloadRows(at: paths, with: .automatic)
-        }
+        let paths = Array(offset..<data.count).map({IndexPath(row: $0, section: 0)})
+        self.table.beginUpdates()
+        self.table.insertRows(at: paths, with: .automatic)
+        self.table.endUpdates()
         
     }
     
@@ -80,12 +79,11 @@ extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        let screenH = self.table.frame.height
-        let offset = scrollView.contentOffset.y
-        if screenH + offset > contentHeight {
-            print("exceed bottom bounds")
+        if height + contentYoffset > contentHeight && contentYoffset > 0 {
+            self.presenter?.fetchData(isPullToRefresh: false)
         }
     }
 }

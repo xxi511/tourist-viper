@@ -15,8 +15,10 @@ class AttractionListPresenter {
     private let interactor: AttractionListInteractorInputProtocol
     private let router: AttractionListRouterProtocol
     
+    private var updateNum: Int = 10
     private var attractions: [Attraction] = []
     private var offset: Int = 0
+    private var isFetchingData: Bool = false
     
     init(view: AttractionListPresenterOutputProtocol,
          interactor: AttractionListInteractorInputProtocol,
@@ -30,6 +32,9 @@ class AttractionListPresenter {
 
 extension AttractionListPresenter: AttractionListPresenterInputProtocol {
     func fetchData(isPullToRefresh: Bool) {
+        guard !self.isFetchingData else {return}
+        self.isFetchingData = true
+        
         view.showLoadingView()
         if (self.attractions.count == 0) {
             interactor.fetchAttractions()
@@ -44,11 +49,12 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
 
 extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     private func sendReloadSignal() {
-        self.offset += 10
+        self.offset = min(self.offset + updateNum, self.attractions.count)
         let idx = self.attractions.startIndex + self.offset
         DispatchQueue.main.async {
             self.view.reloadData(data: Array(self.attractions[0..<idx]))
             self.view.dismissLoadingView()
+            self.isFetchingData = false
         }
         
     }

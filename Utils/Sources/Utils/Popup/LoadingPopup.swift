@@ -35,12 +35,8 @@ public class LoadingPopup: UIView {
     
     private init() {
         super.init(frame: .zero)
-        self.addIndiCator()
-        
-        let color = UIColor(hexString: "eaeaea")!
-        self.backgroundColor = color
-        self.setBorder(width: 1, color: color)
-        self.setCornerRadius(8)
+        let bgView = self.createBackgroundView()
+        self.addIndiCatorAt(bgView)
     }
 }
 
@@ -59,10 +55,10 @@ extension LoadingPopup {
         popup.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         parent.view.addSubview(popup)
         
-        popup.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor).isActive = true
-        popup.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor).isActive = true
-        popup.widthAnchor.constraint(equalToConstant: 128).isActive = true
-        popup.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        popup.topAnchor.constraint(equalTo: parent.view.topAnchor).isActive = true
+        popup.leadingAnchor.constraint(equalTo: parent.view.leadingAnchor).isActive = true
+        popup.trailingAnchor.constraint(equalTo: parent.view.trailingAnchor).isActive = true
+        popup.bottomAnchor.constraint(equalTo: parent.view.bottomAnchor).isActive = true
         
         UIView.animate(withDuration: 0.4) {
             popup.transform = .identity
@@ -70,25 +66,37 @@ extension LoadingPopup {
     }
     
     class private func dismissView(from parent: UIViewController) {
-        let subs = parent.view.subviews
-        for view in subs {
-            if view is LoadingPopup {
-                view.removeFromSuperview()
-                break
-            }
-        }
+        let _ = parent.view.subviews
+            .filter {$0 is LoadingPopup}
+            .map {$0.removeFromSuperview()}
     }
     
-    private func addIndiCator() {
+    private func addIndiCatorAt(_ bgView: UIView) {
         let indicator = UIActivityIndicatorView(style: .gray)
         indicator.startAnimating()
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.transform = CGAffineTransform(scaleX: 2, y: 2)
-        self.addSubview(indicator)
+        bgView.addSubview(indicator)
         
-        indicator.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        indicator.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        indicator.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        indicator.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        indicator.centerXAnchor.constraint(equalTo: bgView.centerXAnchor).isActive = true
+        indicator.centerYAnchor.constraint(equalTo: bgView.centerYAnchor).isActive = true
+        indicator.widthAnchor.constraint(equalTo: bgView.widthAnchor).isActive = true
+        indicator.heightAnchor.constraint(equalTo: bgView.heightAnchor).isActive = true
+    }
+    
+    private func createBackgroundView() -> UIView {
+        let bgView = UIView()
+        bgView.translatesAutoresizingMaskIntoConstraints = false
+        let color = UIColor(hexString: "eaeaea")!
+        bgView.backgroundColor = color
+        bgView.setBorder(width: 1, color: color)
+        bgView.setCornerRadius(8)
+        self.addSubview(bgView)
+        
+        bgView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        bgView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        bgView.widthAnchor.constraint(equalToConstant: 128).isActive = true
+        bgView.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        return bgView
     }
 }
