@@ -99,7 +99,7 @@ extension Attraction {
         // Some files are mp3, remove it
         let filesStr = try values.decode(String.self, forKey: .files)
         files = filesStr.components(separatedBy: "http")
-            .filter({$0.count > 0 && ($0.hasSuffix(".jpg") || $0.hasSuffix(".png"))})
+            .filter({$0.count > 0 && ($0.lowercased().hasSuffix(".jpg") || $0.lowercased().hasSuffix(".png"))})
             .map({url in
                 // only https can get image
                 let append = url.hasPrefix("s") ? "http": "https"
