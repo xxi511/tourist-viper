@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F835D6F23FD5CEA00C373BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */; };
-		5F835D7123FD5CEA00C373BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835D7023FD5CEA00C373BA /* SceneDelegate.swift */; };
 		5F835D7623FD5CEA00C373BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7423FD5CEA00C373BA /* Main.storyboard */; };
 		5F835D7823FD5CEC00C373BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7723FD5CEC00C373BA /* Assets.xcassets */; };
 		5F835D7B23FD5CEC00C373BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7923FD5CEC00C373BA /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 /* Begin PBXFileReference section */
 		5F835D6B23FD5CEA00C373BA /* turist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F835D7023FD5CEA00C373BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F835D7523FD5CEA00C373BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F835D7723FD5CEC00C373BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F835D7A23FD5CEC00C373BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */,
-				5F835D7023FD5CEA00C373BA /* SceneDelegate.swift */,
 				5F835DB823FD66D700C373BA /* AppRouter.swift */,
 			);
 			path = AppDelegate;
@@ -422,7 +419,6 @@
 				5F835DBB23FD6A4100C373BA /* AttractionListPresenterProtocol.swift in Sources */,
 				5F84134523FEE4C600594F98 /* ImageCell.swift in Sources */,
 				5F835DB923FD66D700C373BA /* AppRouter.swift in Sources */,
-				5F835D7123FD5CEA00C373BA /* SceneDelegate.swift in Sources */,
 				5F835DB023FD5ED300C373BA /* AttractionListRouter.swift in Sources */,
 				5F835DBD23FD6A8100C373BA /* AttractionListInteractorProtocol.swift in Sources */,
 				5F835DB723FD664E00C373BA /* AttractionListVC.swift in Sources */,
@@ -602,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C2GNT69CH;
 				INFOPLIST_FILE = "$(SRCROOT)/turist/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C2GNT69CH;
 				INFOPLIST_FILE = "$(SRCROOT)/turist/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
