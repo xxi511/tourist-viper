@@ -8,5 +8,5 @@
 
 import Foundation
 protocol AttractionListRouterProtocol: class {
-    func showErrorAlert(error: Error)
+    func showAlert(title: String?, message: String?)
 }

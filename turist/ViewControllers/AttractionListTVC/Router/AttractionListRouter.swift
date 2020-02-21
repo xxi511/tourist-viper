@@ -31,7 +31,19 @@ class AttractionListRouter: AttractionListRouterProtocol {
         return view
     }
     
-    func showErrorAlert(error: Error) {
+    func showAlert(title: String?, message: String?) {
+        guard let _view = self.view else {return}
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let checkAction = UIAlertAction(title: "了解", style: .default, handler: nil)
+        alert.addAction(checkAction)
+        if (Thread.isMainThread) {
+            _view.present(alert, animated: true, completion: nil)
+        } else {
+            DispatchQueue.main.async {
+                _view.present(alert, animated: true, completion: nil)
+            }
+        }
         
     }
 }
