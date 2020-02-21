@@ -41,6 +41,8 @@ extension AttractionListVC {
     
     private func setupTableView() {
         self.table.tableFooterView = UIView(frame: .zero)
+        self.table.register(AttractionCell.nib,
+                            forCellReuseIdentifier: AttractionCell.Identifier)
     }
 }
 
@@ -72,8 +74,18 @@ extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = self.attractions[indexPath.row].info
+        let cell = tableView.dequeueReusableCell(withIdentifier: AttractionCell.Identifier) as! AttractionCell
+        cell.setData(self.attractions[indexPath.row])
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let contentHeight = scrollView.contentSize.height
+        let screenH = self.table.frame.height
+        let offset = scrollView.contentOffset.y
+        if screenH + offset > contentHeight {
+            print("exceed bottom bounds")
+        }
     }
 }

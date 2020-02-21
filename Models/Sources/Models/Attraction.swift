@@ -96,10 +96,15 @@ extension Attraction {
         
         POI = try values.decode(String.self, forKey: .POI)
         
+        // Some files are mp3, remove it
         let filesStr = try values.decode(String.self, forKey: .files)
         files = filesStr.components(separatedBy: "http")
-            .filter({$0.count > 0})
-            .map({"http" + $0})
+            .filter({$0.count > 0 && ($0.hasSuffix(".jpg") || $0.hasSuffix(".png"))})
+            .map({url in
+                // only https can get image
+                let append = url.hasPrefix("s") ? "http": "https"
+                return append + url
+            })
             .map({URL(string: $0)!})
         
         idpt = try values.decode(String.self, forKey: .idpt)

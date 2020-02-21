@@ -9,15 +9,59 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="283" id="KGk-i7-Jjw" customClass="AttractionCell" customModule="turist" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="223" id="KGk-i7-Jjw" customClass="AttractionCell" customModule="turist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stw-eD-eqI" userLabel="titleLabel">
+                        <rect key="frame" x="12" y="12" width="296" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjn-UO-FU8" userLabel="descLabel">
+                        <rect key="frame" x="12" y="50.5" width="296" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SRt-dW-jk6">
+                        <rect key="frame" x="12" y="83" width="296" height="128"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="128" id="Y17-nL-6lf"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dY3-oj-NaZ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="stw-eD-eqI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="1dk-ge-uGJ"/>
+                    <constraint firstItem="Tjn-UO-FU8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Da2-Un-oep"/>
+                    <constraint firstAttribute="trailing" secondItem="stw-eD-eqI" secondAttribute="trailing" constant="12" id="IXU-yy-orF"/>
+                    <constraint firstAttribute="bottom" secondItem="SRt-dW-jk6" secondAttribute="bottom" constant="12" id="Mjq-nO-vpp"/>
+                    <constraint firstItem="stw-eD-eqI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="aIF-du-weI"/>
+                    <constraint firstAttribute="trailing" secondItem="SRt-dW-jk6" secondAttribute="trailing" constant="12" id="coa-h3-mO8"/>
+                    <constraint firstItem="Tjn-UO-FU8" firstAttribute="top" secondItem="stw-eD-eqI" secondAttribute="bottom" constant="18" id="fcu-KS-2d0"/>
+                    <constraint firstItem="SRt-dW-jk6" firstAttribute="top" secondItem="Tjn-UO-FU8" secondAttribute="bottom" constant="12" id="uWI-Bf-vkr"/>
+                    <constraint firstItem="SRt-dW-jk6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="uk8-dM-vvk"/>
+                    <constraint firstAttribute="trailing" secondItem="Tjn-UO-FU8" secondAttribute="trailing" constant="12" id="wg8-Bl-pgE"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="81"/>
+            <connections>
+                <outlet property="collectionView" destination="SRt-dW-jk6" id="Md2-FU-faN"/>
+                <outlet property="descLabel" destination="Tjn-UO-FU8" id="PzG-19-Vav"/>
+                <outlet property="titleLabel" destination="stw-eD-eqI" id="exR-Rc-4h7"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="60.602678571428569"/>
         </tableViewCell>
     </objects>
 </document>
