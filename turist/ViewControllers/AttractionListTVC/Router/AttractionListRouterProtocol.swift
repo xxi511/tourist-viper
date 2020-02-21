@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
 protocol AttractionListRouterProtocol: class {
+    static func createModule() -> UIViewController
+    
     func showAlert(title: String?, message: String?)
 }

@@ -14,10 +14,10 @@ class ImageCell: UICollectionViewCell {
     static let nib = UINib(nibName: "ImageCell", bundle: Bundle.main)
 
     @IBOutlet private var imageView: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView.image = UIImage(named: "defaultImage")
     }
 
     func setData(url: URL) {

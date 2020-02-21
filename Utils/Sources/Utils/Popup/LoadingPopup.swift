@@ -9,7 +9,7 @@ import UIKit
 
 public class LoadingPopup: UIView {
     
-    public class func show(in parent: UIViewController) {
+    public static func show(in parent: UIViewController) {
         if (Thread.isMainThread) {
             LoadingPopup.prepareView(in: parent)
         } else {
@@ -19,7 +19,7 @@ public class LoadingPopup: UIView {
         }
     }
     
-    public class func remove(from parent: UIViewController) {
+    public static func remove(from parent: UIViewController) {
         if (Thread.isMainThread) {
             LoadingPopup.dismissView(from: parent)
         } else {
@@ -42,13 +42,13 @@ public class LoadingPopup: UIView {
 
 // MARK: Private
 extension LoadingPopup {
-    class private func isRedundant(parent: UIViewController) -> Bool {
+    static private func isRedundant(parent: UIViewController) -> Bool {
         let subs = parent.view.subviews
         let views = subs.filter({$0 is LoadingPopup})
         return views.count > 0
     }
     
-    class private func prepareView(in parent: UIViewController) {
+    static private func prepareView(in parent: UIViewController) {
         guard !LoadingPopup.isRedundant(parent: parent) else {return}
         let popup = LoadingPopup()
         popup.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +65,7 @@ extension LoadingPopup {
         }
     }
     
-    class private func dismissView(from parent: UIViewController) {
+    static private func dismissView(from parent: UIViewController) {
         let _ = parent.view.subviews
             .filter {$0 is LoadingPopup}
             .map {$0.removeFromSuperview()}

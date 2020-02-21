@@ -24,16 +24,10 @@ class AttractionCell: UITableViewCell {
         self.collectionView.dataSource = self
         self.collectionView.register(ImageCell.nib,
                                      forCellWithReuseIdentifier: ImageCell.Identifier)
-        
-//        let layout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//        layout.minimumInteritemSpacing = 5.0
-//        layout.minimumLineSpacing = 5.0
-//        layout.itemSize = CGSize(width: 128, height: 128)
-//        collectionView!.collectionViewLayout = layout
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         self.titleLabel.text = ""
         self.descLabel.text = ""
         self.images = []

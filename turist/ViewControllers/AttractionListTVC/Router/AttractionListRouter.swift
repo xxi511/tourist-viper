@@ -19,7 +19,7 @@ class AttractionListRouter: AttractionListRouterProtocol {
         self.view = view
     }
     
-    class func createModule() -> UIViewController {
+    static func createModule() -> UIViewController {
         
         let view = mainStoryboard.instantiateViewController(withIdentifier: "AttractionListVC") as! AttractionListVC
         let router = AttractionListRouter(view: view)
