@@ -51,6 +51,7 @@ extension AttractionListVC {
     
     private func setupRefresher()  {
         self.refresher = UIRefreshControl()
+        self.refresher!.accessibilityIdentifier = "refresher"
         self.refresher!.addTarget(self, action: #selector(AttractionListVC.fetchNewData), for: .valueChanged)
     }
     
@@ -102,6 +103,7 @@ extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AttractionCell.Identifier) as! AttractionCell
         cell.setData(self.attractions[indexPath.row])
+        cell.accessibilityIdentifier = "AttractionCell-\(indexPath.row)"
         return cell
     }
     

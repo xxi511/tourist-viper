@@ -23,13 +23,20 @@ class turistUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testSwipeUp() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let cell1 = app.cells.matching(.cell, identifier: "AttractionCell-1").firstMatch
+        XCTAssert(cell1.waitForExistence(timeout: 2.0))
+        let title1 = cell1.staticTexts.matching(.staticText, identifier: "AttractionTitle").firstMatch
+        XCTAssert(title1.label != "")
+        
+        let desc1 = cell1.staticTexts.matching(.staticText, identifier: "AttractionDescription").firstMatch
+        XCTAssert(desc1.label != "")
+        
+        app.tables.cells.firstMatch.swipeUp()
     }
 
     func testLaunchPerformance() {
