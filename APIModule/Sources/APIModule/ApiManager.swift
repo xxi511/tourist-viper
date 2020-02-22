@@ -11,7 +11,11 @@ import Models
 
 public class ApiManager: ApiProtocol {
     public static let shared: ApiManager = ApiManager()
-    private let session = URLSession.shared
+    private let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol=URLSession.shared) {
+        self.session = session
+    }
     
     public func fetchAttraction(completeHandler: @escaping (Result<[Attraction]>) -> Void) {
         let req = URLRequest(url: APIType.Attraction.url)
@@ -28,7 +32,7 @@ public class ApiManager: ApiProtocol {
 }
 
 extension ApiManager {
-    private func doRequest(_ request: URLRequest, completeHandler: @escaping (Result<Data>) -> Void) {
+    internal func doRequest(_ request: URLRequest, completeHandler: @escaping (Result<Data>) -> Void) {
         let task = self.session.dataTask(with: request) { (data, urlResponse, error) in
             guard error == nil else {
                 completeHandler(.Error(error!))
