@@ -24,6 +24,15 @@ class AttractionCell: UITableViewCell {
         self.collectionView.dataSource = self
         self.collectionView.register(ImageCell.nib,
                                      forCellWithReuseIdentifier: ImageCell.Identifier)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.minimumLineSpacing = 5
+        layout.itemSize = CGSize(width: 240, height: 128)
+        layout.headerReferenceSize = .zero
+        layout.footerReferenceSize = .zero
+        self.collectionView.collectionViewLayout = layout
     }
     
     override func prepareForReuse() {
@@ -31,6 +40,7 @@ class AttractionCell: UITableViewCell {
         self.titleLabel.text = ""
         self.descLabel.text = ""
         self.images = []
+        self.collectionView.contentOffset = .zero
     }
     
     func setData(_ attraction: Attraction) {
