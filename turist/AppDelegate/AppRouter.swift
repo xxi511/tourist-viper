@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class AppRouter {
     static func initRoute(window: UIWindow) {
-        let vc = AttractionListRouter.createModule()
+        let vc = AttractionListBuilder.createModule()
         let naviVC = UINavigationController(rootViewController: vc)
         window.rootViewController = naviVC
         window.makeKeyAndVisible()

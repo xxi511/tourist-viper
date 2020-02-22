@@ -15,20 +15,8 @@ class AttractionListRouter: AttractionListRouterProtocol {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
     
-    private init(view: UIViewController) {
+    init(view: UIViewController) {
         self.view = view
-    }
-    
-    static func createModule() -> UIViewController {
-        
-        let view = mainStoryboard.instantiateViewController(withIdentifier: "AttractionListVC") as! AttractionListVC
-        let router = AttractionListRouter(view: view)
-        let interactor = AttractionListInteractor()
-        let presenter = AttractionListPresenter(view: view, interactor: interactor, router: router)
-        view.configure(presenter: presenter)
-        interactor.configure(presenter: presenter)
-        
-        return view
     }
     
     func showAlert(title: String?, message: String?) {

@@ -10,8 +10,11 @@ import Foundation
 @testable import turist
 
 class MockAttractionListInteractor: AttractionListInteractorInputProtocol {
+    
+    private(set) var isFetching = false
+    
     func fetchAttractions() {
-        
+        self.isFetching = true
     }
     
 }

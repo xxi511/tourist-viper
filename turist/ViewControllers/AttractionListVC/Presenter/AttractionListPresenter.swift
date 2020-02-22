@@ -52,10 +52,8 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
 extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     private func sendReloadSignal() {
         defer {
-            DispatchQueue.main.async {
-                self.view?.dismissLoadingView()
-                self.isFetchingData = false
-            }
+            self.view?.dismissLoadingView()
+            self.isFetchingData = false
         }
         
         guard self.offset != self.attractions.count else {
@@ -65,13 +63,11 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
         
         let start = self.offset
         self.offset = min(self.offset + updateNum, self.attractions.count)
-        DispatchQueue.main.async {
-            if (self.offset == self.updateNum) {
-                self.view?.reloadData(data: Array(self.attractions[0..<self.offset]))
-            } else {
-                self.view?.insertData(data: Array(self.attractions[start..<self.offset]))
-            }
-            
+        
+        if (self.offset == self.updateNum) {
+            self.view?.reloadData(data: Array(self.attractions[0..<self.offset]))
+        } else {
+            self.view?.insertData(data: Array(self.attractions[start..<self.offset]))
         }
     }
     
@@ -82,6 +78,7 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     
     func fetchAttractionsFailed(error: Error) {
         router?.showAlert(title: "發生錯誤", message: error.localizedDescription)
+        self.view?.dismissLoadingView()
     }
     
     

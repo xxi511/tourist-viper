@@ -19,9 +19,25 @@ class AttractionListPresenterTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testFetchData() {
+    func testFirstFetchData() {
         self.presenter.fetchData(isPullToRefresh: true)
+        XCTAssert(self.view.isLoading)
+        XCTAssert(self.interactor.isFetching)
         
+        self.presenter.fetchAttractionsSuccess(attractions: FakeData.fakeAttraction())
+        XCTAssertFalse(self.view.isLoading)
+        XCTAssert(self.view.data.count == 2)
+    }
+    
+    func testFetchDataFailed() {
+        self.presenter.fetchData(isPullToRefresh: true)
+        XCTAssert(self.view.isLoading)
+        XCTAssert(self.interactor.isFetching)
+        
+        let error = NSError(domain: "test", code: 404, userInfo: ["message": "error occured"])
+        self.presenter.fetchAttractionsFailed(error: error)
+        XCTAssertFalse(self.view.isLoading)
+        XCTAssert(self.router.title == "發生錯誤")
     }
 
     func testExample() {

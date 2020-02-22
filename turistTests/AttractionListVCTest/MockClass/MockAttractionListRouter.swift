@@ -10,12 +10,13 @@ import UIKit
 @testable import turist
 
 class MockAttractionListRouter: AttractionListRouterProtocol {
-    static func createModule() -> UIViewController {
-        return UIViewController()
-    }
+    
+    private(set) var title: String?
+    private(set) var message: String?
     
     func showAlert(title: String?, message: String?) {
-        
+        self.title = title
+        self.message = message
     }
     
     

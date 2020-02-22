@@ -62,27 +62,35 @@ extension AttractionListVC {
 
 extension AttractionListVC: AttractionListPresenterOutputProtocol {
     func reloadData(data: [Attraction]) {
-        self.attractions = data
-        self.table.reloadData()
+        DispatchQueue.main.async {
+            self.attractions = data
+            self.table.reloadData()
+        }
     }
     
     func insertData(data: [Attraction]) {
-        let start = self.attractions.count
-        self.attractions.append(contentsOf: data)
-        let end = self.attractions.count
-        let paths = Array(start..<end).map({IndexPath(row: $0, section: 0)})
-        self.table.beginUpdates()
-        self.table.insertRows(at: paths, with: .automatic)
-        self.table.endUpdates()
+        DispatchQueue.main.async {
+            let start = self.attractions.count
+            self.attractions.append(contentsOf: data)
+            let end = self.attractions.count
+            let paths = Array(start..<end).map({IndexPath(row: $0, section: 0)})
+            self.table.beginUpdates()
+            self.table.insertRows(at: paths, with: .automatic)
+            self.table.endUpdates()
+        }
     }
     
     func showLoadingView() {
-        LoadingPopup.show(in: self)
+        DispatchQueue.main.async {
+            LoadingPopup.show(in: self)
+        }
     }
     
     func dismissLoadingView() {
-        LoadingPopup.remove(from: self)
-        self.refresher?.endRefreshing()
+        DispatchQueue.main.async {
+            LoadingPopup.remove(from: self)
+            self.refresher?.endRefreshing()
+        }
     }
 }
 

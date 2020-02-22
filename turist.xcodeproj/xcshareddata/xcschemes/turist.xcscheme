@@ -38,6 +38,16 @@
                ReferencedContainer = "container:turist.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5FB644DE2401611A00190923"
+               BuildableName = "turistUITests.xctest"
+               BlueprintName = "turistUITests"
+               ReferencedContainer = "container:turist.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

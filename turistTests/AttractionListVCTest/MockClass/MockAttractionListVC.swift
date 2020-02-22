@@ -12,8 +12,8 @@ import Foundation
 
 class MockAttractionListVC: AttractionListPresenterOutputProtocol {
     
-    private var data: [Attraction] = []
-    private var isLoading: Bool = false
+    private(set) var data: [Attraction] = []
+    private(set) var isLoading: Bool = false
     
     func reloadData(data: [Attraction]) {
         self.data = data
