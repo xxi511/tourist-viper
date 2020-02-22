@@ -11,11 +11,16 @@ import Foundation
 @testable import Models
 
 class MockAttractionListVC: AttractionListPresenterOutputProtocol {
+    
     private var data: [Attraction] = []
     private var isLoading: Bool = false
     
     func reloadData(data: [Attraction]) {
         self.data = data
+    }
+    
+    func insertData(data: [Attraction]) {
+        self.data.append(contentsOf: data)
     }
     
     func showLoadingView() {

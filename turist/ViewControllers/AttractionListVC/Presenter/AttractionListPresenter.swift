@@ -11,9 +11,9 @@ import Models
 
 class AttractionListPresenter {
     
-    private let view: AttractionListPresenterOutputProtocol
-    private let interactor: AttractionListInteractorInputProtocol
-    private let router: AttractionListRouterProtocol
+    private weak var view: AttractionListPresenterOutputProtocol?
+    private weak var interactor: AttractionListInteractorInputProtocol?
+    private weak var router: AttractionListRouterProtocol?
     
     private var updateNum: Int = 10
     private var attractions: [Attraction] = []
@@ -35,11 +35,11 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
         guard !self.isFetchingData else {return}
         self.isFetchingData = true
         
-        view.showLoadingView()
+        view?.showLoadingView()
         if (isPullToRefresh) {
             self.offset = 0
             self.attractions = []
-            interactor.fetchAttractions()
+            interactor?.fetchAttractions()
         } else {
             // Simulate real http request delay
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
@@ -53,13 +53,13 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     private func sendReloadSignal() {
         defer {
             DispatchQueue.main.async {
-                self.view.dismissLoadingView()
+                self.view?.dismissLoadingView()
                 self.isFetchingData = false
             }
         }
         
         guard self.offset != self.attractions.count else {
-            router.showAlert(title: nil, message: "沒有更多資料了")
+            router?.showAlert(title: nil, message: "沒有更多資料了")
             return
         }
         
@@ -67,9 +67,9 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
         self.offset = min(self.offset + updateNum, self.attractions.count)
         DispatchQueue.main.async {
             if (self.offset == self.updateNum) {
-                self.view.reloadData(data: Array(self.attractions[0..<self.offset]))
+                self.view?.reloadData(data: Array(self.attractions[0..<self.offset]))
             } else {
-                self.view.insertData(data: Array(self.attractions[start..<self.offset]))
+                self.view?.insertData(data: Array(self.attractions[start..<self.offset]))
             }
             
         }
@@ -81,7 +81,7 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     }
     
     func fetchAttractionsFailed(error: Error) {
-        router.showAlert(title: "發生錯誤", message: error.localizedDescription)
+        router?.showAlert(title: "發生錯誤", message: error.localizedDescription)
     }
     
     

@@ -9,11 +9,11 @@
 import Foundation
 import Models
 
-protocol AttractionListInteractorInputProtocol {
+protocol AttractionListInteractorInputProtocol: class {
     func fetchAttractions()
 }
 
-protocol AttractionListInteractorOutputProtocol {
+protocol AttractionListInteractorOutputProtocol: class {
     func fetchAttractionsSuccess(attractions: [Attraction])
     func fetchAttractionsFailed(error: Error)
 }

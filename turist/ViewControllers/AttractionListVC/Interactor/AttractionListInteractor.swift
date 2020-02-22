@@ -11,7 +11,7 @@ import APIModule
 
 class AttractionListInteractor {
     private let apiManager: APIProtocol
-    private var presenter: AttractionListInteractorOutputProtocol?
+    private weak var presenter: AttractionListInteractorOutputProtocol?
     
     init(apiManager: APIProtocol=ApiManager.shared) {
         self.apiManager = apiManager
