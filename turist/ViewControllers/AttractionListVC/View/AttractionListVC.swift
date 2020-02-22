@@ -15,7 +15,7 @@ class AttractionListVC: UIViewController {
 
     @IBOutlet private var table: UITableView!
     private var refresher: UIRefreshControl?
-    private weak var presenter: AttractionListPresenterInputProtocol?
+    private var presenter: AttractionListPresenterInputProtocol?
     
     private var attractions: [Attraction] = []
     

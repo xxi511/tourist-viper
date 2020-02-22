@@ -12,8 +12,8 @@ import Models
 class AttractionListPresenter {
     
     private weak var view: AttractionListPresenterOutputProtocol?
-    private weak var interactor: AttractionListInteractorInputProtocol?
-    private weak var router: AttractionListRouterProtocol?
+    private var interactor: AttractionListInteractorInputProtocol?
+    private var router: AttractionListRouterProtocol?
     
     private var updateNum: Int = 10
     private var attractions: [Attraction] = []
