@@ -36,14 +36,13 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
         self.isFetchingData = true
         
         view.showLoadingView()
-        if (self.attractions.count == 0) {
+        if (isPullToRefresh) {
+            self.offset = 0
+            self.attractions = []
             interactor.fetchAttractions()
         } else {
             // Simulate real http request delay
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-                if (isPullToRefresh) {
-                    self.offset = 0
-                }
                 self.sendReloadSignal()
             }
         }
