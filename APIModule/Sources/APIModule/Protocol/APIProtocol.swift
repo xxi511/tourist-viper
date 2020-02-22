@@ -9,6 +9,6 @@
 import Foundation
 import Models
 
-public protocol ApiProtocol {
+public protocol APIProtocol {
     func fetchAttraction(completeHandler: @escaping (Result<[Attraction]>) -> Void)
 }

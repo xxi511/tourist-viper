@@ -14,6 +14,7 @@ import Utils
 class AttractionListVC: UIViewController {
 
     @IBOutlet private var table: UITableView!
+    private var refresher: UIRefreshControl?
     private var presenter: AttractionListPresenterInputProtocol?
     
     private var attractions: [Attraction] = []
@@ -21,7 +22,7 @@ class AttractionListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        self.presenter?.fetchData(isPullToRefresh: true)
+        self.fetchNewData()
     }
     
     func configure(presenter: AttractionListPresenterInputProtocol) {
@@ -33,6 +34,7 @@ class AttractionListVC: UIViewController {
 extension AttractionListVC {
     private func setupUI() {
         self.setupTopBar()
+        self.setupRefresher()
         self.setupTableView()
     }
     
@@ -44,18 +46,34 @@ extension AttractionListVC {
         self.table.tableFooterView = UIView(frame: .zero)
         self.table.register(AttractionCell.nib,
                             forCellReuseIdentifier: AttractionCell.Identifier)
+        self.table.addSubview(self.refresher!)
+    }
+    
+    private func setupRefresher()  {
+        self.refresher = UIRefreshControl()
+        self.refresher!.addTarget(self, action: #selector(AttractionListVC.fetchNewData), for: .valueChanged)
+    }
+    
+    @objc private func fetchNewData() {
+        self.attractions = []
+        self.presenter?.fetchData(isPullToRefresh: true)
     }
 }
 
 extension AttractionListVC: AttractionListPresenterOutputProtocol {
     func reloadData(data: [Attraction]) {
-        let offset = self.attractions.count
         self.attractions = data
-        let paths = Array(offset..<data.count).map({IndexPath(row: $0, section: 0)})
+        self.table.reloadData()
+    }
+    
+    func insertData(data: [Attraction]) {
+        let start = self.attractions.count
+        self.attractions.append(contentsOf: data)
+        let end = self.attractions.count
+        let paths = Array(start..<end).map({IndexPath(row: $0, section: 0)})
         self.table.beginUpdates()
         self.table.insertRows(at: paths, with: .automatic)
         self.table.endUpdates()
-        
     }
     
     func showLoadingView() {
@@ -64,6 +82,7 @@ extension AttractionListVC: AttractionListPresenterOutputProtocol {
     
     func dismissLoadingView() {
         LoadingPopup.remove(from: self)
+        self.refresher?.endRefreshing()
     }
 }
 
@@ -83,7 +102,7 @@ extension AttractionListVC: UITableViewDelegate, UITableViewDataSource {
         let contentYoffset = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         if height + contentYoffset > contentHeight && contentYoffset > 0 {
-            self.presenter?.fetchData(isPullToRefresh: false)
+            presenter?.fetchData(isPullToRefresh: false)
         }
     }
 }

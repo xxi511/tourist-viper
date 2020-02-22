@@ -41,6 +41,9 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
         } else {
             // Simulate real http request delay
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+                if (isPullToRefresh) {
+                    self.offset = 0
+                }
                 self.sendReloadSignal()
             }
         }
@@ -50,8 +53,10 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
 extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
     private func sendReloadSignal() {
         defer {
-            view.dismissLoadingView()
-            self.isFetchingData = false
+            DispatchQueue.main.async {
+                self.view.dismissLoadingView()
+                self.isFetchingData = false
+            }
         }
         
         guard self.offset != self.attractions.count else {
@@ -59,9 +64,15 @@ extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
             return
         }
         
+        let start = self.offset
         self.offset = min(self.offset + updateNum, self.attractions.count)
         DispatchQueue.main.async {
-            self.view.reloadData(data: Array(self.attractions[0..<self.offset]))
+            if (self.offset == self.updateNum) {
+                self.view.reloadData(data: Array(self.attractions[0..<self.offset]))
+            } else {
+                self.view.insertData(data: Array(self.attractions[start..<self.offset]))
+            }
+            
         }
     }
     

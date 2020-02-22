@@ -9,7 +9,7 @@
 import Foundation
 import Models
 
-public class ApiManager: ApiProtocol {
+public class ApiManager: APIProtocol {
     public static let shared: ApiManager = ApiManager()
     private let session: URLSessionProtocol
     

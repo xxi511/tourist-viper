@@ -15,6 +15,7 @@ protocol AttractionListPresenterInputProtocol {
 
 protocol AttractionListPresenterOutputProtocol {
     func reloadData(data: [Attraction])
+    func insertData(data: [Attraction])
     func showLoadingView()
     func dismissLoadingView()
 }

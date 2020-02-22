@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F04E9552400FF05000BB14B /* MockAttractionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04E9542400FF05000BB14B /* MockAttractionListInteractor.swift */; };
+		5F04E9572400FF66000BB14B /* MockAttractionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04E9562400FF66000BB14B /* MockAttractionListRouter.swift */; };
+		5F04E9592400FFC9000BB14B /* MockAttractionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04E9582400FFC9000BB14B /* MockAttractionListVC.swift */; };
+		5F04E95B2401047E000BB14B /* AttractionListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04E95A2401047E000BB14B /* AttractionListPresenterTest.swift */; };
 		5F835D6F23FD5CEA00C373BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */; };
 		5F835D7623FD5CEA00C373BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7423FD5CEA00C373BA /* Main.storyboard */; };
 		5F835D7823FD5CEC00C373BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7723FD5CEC00C373BA /* Assets.xcassets */; };
 		5F835D7B23FD5CEC00C373BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F835D7923FD5CEC00C373BA /* LaunchScreen.storyboard */; };
 		5F835D8623FD5CEC00C373BA /* turistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835D8523FD5CEC00C373BA /* turistTests.swift */; };
-		5F835D9123FD5CED00C373BA /* turistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835D9023FD5CED00C373BA /* turistUITests.swift */; };
 		5F835DAB23FD5EAE00C373BA /* AttractionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DAA23FD5EAE00C373BA /* AttractionListInteractor.swift */; };
 		5F835DAD23FD5EBE00C373BA /* AttractionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DAC23FD5EBE00C373BA /* AttractionListPresenter.swift */; };
 		5F835DB023FD5ED300C373BA /* AttractionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F835DAF23FD5ED300C373BA /* AttractionListRouter.swift */; };
@@ -29,6 +32,9 @@
 		5F84134523FEE4C600594F98 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84134323FEE4C600594F98 /* ImageCell.swift */; };
 		5F84134623FEE4C600594F98 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F84134423FEE4C600594F98 /* ImageCell.xib */; };
 		5F84134923FEE93E00594F98 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5F84134823FEE93E00594F98 /* Kingfisher */; };
+		5FC2D9CF2400E944004C7FB7 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2D9CE2400E944004C7FB7 /* MockAPIManager.swift */; };
+		5FC2D9D12400EA55004C7FB7 /* AttractionListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2D9D02400EA55004C7FB7 /* AttractionListInteractorTest.swift */; };
+		5FC2D9D42400ED02004C7FB7 /* MockAttractionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2D9D32400ED02004C7FB7 /* MockAttractionListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +45,13 @@
 			remoteGlobalIDString = 5F835D6A23FD5CEA00C373BA;
 			remoteInfo = turist;
 		};
-		5F835D8D23FD5CED00C373BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F835D6323FD5CEA00C373BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F835D6A23FD5CEA00C373BA;
-			remoteInfo = turist;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F04E9542400FF05000BB14B /* MockAttractionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAttractionListInteractor.swift; sourceTree = "<group>"; };
+		5F04E9562400FF66000BB14B /* MockAttractionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAttractionListRouter.swift; sourceTree = "<group>"; };
+		5F04E9582400FFC9000BB14B /* MockAttractionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAttractionListVC.swift; sourceTree = "<group>"; };
+		5F04E95A2401047E000BB14B /* AttractionListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenterTest.swift; sourceTree = "<group>"; };
 		5F835D6B23FD5CEA00C373BA /* turist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F835D7523FD5CEA00C373BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,9 +61,6 @@
 		5F835D8123FD5CEC00C373BA /* turistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F835D8523FD5CEC00C373BA /* turistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turistTests.swift; sourceTree = "<group>"; };
 		5F835D8723FD5CEC00C373BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F835D8C23FD5CED00C373BA /* turistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F835D9023FD5CED00C373BA /* turistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turistUITests.swift; sourceTree = "<group>"; };
-		5F835D9223FD5CED00C373BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F835DAA23FD5EAE00C373BA /* AttractionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListInteractor.swift; sourceTree = "<group>"; };
 		5F835DAC23FD5EBE00C373BA /* AttractionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenter.swift; sourceTree = "<group>"; };
 		5F835DAF23FD5ED300C373BA /* AttractionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListRouter.swift; sourceTree = "<group>"; };
@@ -73,6 +73,9 @@
 		5F84133F23FEDD0000594F98 /* AttractionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionCell.xib; sourceTree = "<group>"; };
 		5F84134323FEE4C600594F98 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5F84134423FEE4C600594F98 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		5FC2D9CE2400E944004C7FB7 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
+		5FC2D9D02400EA55004C7FB7 /* AttractionListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListInteractorTest.swift; sourceTree = "<group>"; };
+		5FC2D9D32400ED02004C7FB7 /* MockAttractionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAttractionListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +97,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F835D8923FD5CED00C373BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,7 +105,6 @@
 			children = (
 				5F835D6D23FD5CEA00C373BA /* turist */,
 				5F835D8423FD5CEC00C373BA /* turistTests */,
-				5F835D8F23FD5CED00C373BA /* turistUITests */,
 				5F835D6C23FD5CEA00C373BA /* Products */,
 				5F84133523FED5A300594F98 /* Frameworks */,
 			);
@@ -120,7 +115,6 @@
 			children = (
 				5F835D6B23FD5CEA00C373BA /* turist.app */,
 				5F835D8123FD5CEC00C373BA /* turistTests.xctest */,
-				5F835D8C23FD5CED00C373BA /* turistUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,19 +134,11 @@
 		5F835D8423FD5CEC00C373BA /* turistTests */ = {
 			isa = PBXGroup;
 			children = (
+				5FC2D9CC2400E905004C7FB7 /* AttractionListVCTest */,
 				5F835D8523FD5CEC00C373BA /* turistTests.swift */,
 				5F835D8723FD5CEC00C373BA /* Info.plist */,
 			);
 			path = turistTests;
-			sourceTree = "<group>";
-		};
-		5F835D8F23FD5CED00C373BA /* turistUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5F835D9023FD5CED00C373BA /* turistUITests.swift */,
-				5F835D9223FD5CED00C373BA /* Info.plist */,
-			);
-			path = turistUITests;
 			sourceTree = "<group>";
 		};
 		5F835D9E23FD5CFC00C373BA /* SupportFiles */ = {
@@ -185,12 +171,12 @@
 		5F835DA123FD5DBF00C373BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5F835DA223FD5DEA00C373BA /* AttractionListTVC */,
+				5F835DA223FD5DEA00C373BA /* AttractionListVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		5F835DA223FD5DEA00C373BA /* AttractionListTVC */ = {
+		5F835DA223FD5DEA00C373BA /* AttractionListVC */ = {
 			isa = PBXGroup;
 			children = (
 				5F835DA623FD5E6000C373BA /* Router */,
@@ -198,7 +184,7 @@
 				5F835DA423FD5E1C00C373BA /* Interactor */,
 				5F835DA323FD5E1100C373BA /* View */,
 			);
-			path = AttractionListTVC;
+			path = AttractionListVC;
 			sourceTree = "<group>";
 		};
 		5F835DA323FD5E1100C373BA /* View */ = {
@@ -270,6 +256,36 @@
 			path = ImageCell;
 			sourceTree = "<group>";
 		};
+		5FC2D9CC2400E905004C7FB7 /* AttractionListVCTest */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2D9D22400ECE1004C7FB7 /* MockClass */,
+				5FC2D9CD2400E92B004C7FB7 /* InteractorTest */,
+			);
+			path = AttractionListVCTest;
+			sourceTree = "<group>";
+		};
+		5FC2D9CD2400E92B004C7FB7 /* InteractorTest */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2D9D02400EA55004C7FB7 /* AttractionListInteractorTest.swift */,
+				5F04E95A2401047E000BB14B /* AttractionListPresenterTest.swift */,
+			);
+			path = InteractorTest;
+			sourceTree = "<group>";
+		};
+		5FC2D9D22400ECE1004C7FB7 /* MockClass */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2D9CE2400E944004C7FB7 /* MockAPIManager.swift */,
+				5FC2D9D32400ED02004C7FB7 /* MockAttractionListPresenter.swift */,
+				5F04E9542400FF05000BB14B /* MockAttractionListInteractor.swift */,
+				5F04E9562400FF66000BB14B /* MockAttractionListRouter.swift */,
+				5F04E9582400FFC9000BB14B /* MockAttractionListVC.swift */,
+			);
+			path = MockClass;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,24 +330,6 @@
 			productReference = 5F835D8123FD5CEC00C373BA /* turistTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5F835D8B23FD5CED00C373BA /* turistUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F835D9B23FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turistUITests" */;
-			buildPhases = (
-				5F835D8823FD5CED00C373BA /* Sources */,
-				5F835D8923FD5CED00C373BA /* Frameworks */,
-				5F835D8A23FD5CED00C373BA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F835D8E23FD5CED00C373BA /* PBXTargetDependency */,
-			);
-			name = turistUITests;
-			productName = turistUITests;
-			productReference = 5F835D8C23FD5CED00C373BA /* turistUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,10 +344,6 @@
 						CreatedOnToolsVersion = 11.3;
 					};
 					5F835D8023FD5CEC00C373BA = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 5F835D6A23FD5CEA00C373BA;
-					};
-					5F835D8B23FD5CED00C373BA = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 5F835D6A23FD5CEA00C373BA;
 					};
@@ -373,7 +367,6 @@
 			targets = (
 				5F835D6A23FD5CEA00C373BA /* turist */,
 				5F835D8023FD5CEC00C373BA /* turistTests */,
-				5F835D8B23FD5CED00C373BA /* turistUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,13 +385,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5F835D7F23FD5CEC00C373BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F835D8A23FD5CED00C373BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,15 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F04E9552400FF05000BB14B /* MockAttractionListInteractor.swift in Sources */,
+				5FC2D9CF2400E944004C7FB7 /* MockAPIManager.swift in Sources */,
+				5FC2D9D42400ED02004C7FB7 /* MockAttractionListPresenter.swift in Sources */,
+				5F04E95B2401047E000BB14B /* AttractionListPresenterTest.swift in Sources */,
+				5F04E9572400FF66000BB14B /* MockAttractionListRouter.swift in Sources */,
+				5F04E9592400FFC9000BB14B /* MockAttractionListVC.swift in Sources */,
+				5FC2D9D12400EA55004C7FB7 /* AttractionListInteractorTest.swift in Sources */,
 				5F835D8623FD5CEC00C373BA /* turistTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F835D8823FD5CED00C373BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F835D9123FD5CED00C373BA /* turistUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +434,6 @@
 			isa = PBXTargetDependency;
 			target = 5F835D6A23FD5CEA00C373BA /* turist */;
 			targetProxy = 5F835D8223FD5CEC00C373BA /* PBXContainerItemProxy */;
-		};
-		5F835D8E23FD5CED00C373BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F835D6A23FD5CEA00C373BA /* turist */;
-			targetProxy = 5F835D8D23FD5CED00C373BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -671,44 +651,6 @@
 			};
 			name = Release;
 		};
-		5F835D9C23FD5CED00C373BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = turistUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.apple.turistUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = turist;
-			};
-			name = Debug;
-		};
-		5F835D9D23FD5CED00C373BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = turistUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.apple.turistUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = turist;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -735,15 +677,6 @@
 			buildConfigurations = (
 				5F835D9923FD5CED00C373BA /* Debug */,
 				5F835D9A23FD5CED00C373BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F835D9B23FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turistUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F835D9C23FD5CED00C373BA /* Debug */,
-				5F835D9D23FD5CED00C373BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

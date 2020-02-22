@@ -10,10 +10,10 @@ import Foundation
 import APIModule
 
 class AttractionListInteractor {
-    private let apiManager: ApiProtocol
+    private let apiManager: APIProtocol
     private var presenter: AttractionListInteractorOutputProtocol?
     
-    init(apiManager: ApiProtocol=ApiManager.shared) {
+    init(apiManager: APIProtocol=ApiManager.shared) {
         self.apiManager = apiManager
     }
     
