@@ -56,7 +56,6 @@ extension AttractionListVC {
     }
     
     @objc private func fetchNewData() {
-        self.attractions = []
         self.presenter?.fetchData(isPullToRefresh: true)
     }
 }
@@ -70,6 +69,8 @@ extension AttractionListVC: AttractionListPresenterOutputProtocol {
     }
     
     func insertData(data: [Attraction]) {
+        guard data.count > 0 else {return}
+        
         DispatchQueue.main.async {
             let start = self.attractions.count
             self.attractions.append(contentsOf: data)
@@ -91,6 +92,9 @@ extension AttractionListVC: AttractionListPresenterOutputProtocol {
         DispatchQueue.main.async {
             LoadingPopup.remove(from: self)
             self.refresher?.endRefreshing()
+            UIView.animate(withDuration: 0.5, animations: {
+                self.table.contentOffset = .zero
+            })
         }
     }
 }

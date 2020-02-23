@@ -36,49 +36,50 @@ extension AttractionListPresenter: AttractionListPresenterInputProtocol {
         self.isFetchingData = true
         
         view?.showLoadingView()
-        if (isPullToRefresh) {
+        if (isPullToRefresh || self.attractions.count == 0) {
             self.offset = 0
             self.attractions = []
             interactor?.fetchAttractions()
         } else {
             // Simulate real http request delay
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-                self.sendReloadSignal()
+                self.sendReloadSignal(isPullToRefresh: false)
             }
         }
     }
 }
 
 extension AttractionListPresenter: AttractionListInteractorOutputProtocol {
-    private func sendReloadSignal() {
+    private func sendReloadSignal(isPullToRefresh: Bool) {
         defer {
             self.view?.dismissLoadingView()
             self.isFetchingData = false
         }
-        
-        guard self.offset != self.attractions.count else {
-            router?.showAlert(title: nil, message: "沒有更多資料了")
-            return
-        }
-        
+
         let start = self.offset
         self.offset = min(self.offset + updateNum, self.attractions.count)
         
-        if (self.offset == self.updateNum) {
+        if (isPullToRefresh) {
             self.view?.reloadData(data: Array(self.attractions[0..<self.offset]))
         } else {
             self.view?.insertData(data: Array(self.attractions[start..<self.offset]))
+        }
+        
+        if self.offset == self.attractions.count {
+            router?.showAlert(title: nil, message: "沒有更多資料了")
         }
     }
     
     func fetchAttractionsSuccess(attractions: [Attraction]) {
         self.attractions = attractions
-        self.sendReloadSignal()
+        self.sendReloadSignal(isPullToRefresh: true)
     }
     
     func fetchAttractionsFailed(error: Error) {
-        router?.showAlert(title: "發生錯誤", message: error.localizedDescription)
         self.view?.dismissLoadingView()
+        self.view?.reloadData(data: [])
+        self.isFetchingData = false
+        router?.showAlert(title: "發生錯誤", message: error.localizedDescription)
     }
     
     
