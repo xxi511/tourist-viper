@@ -64,13 +64,13 @@
 		5F04E95A2401047E000BB14B /* AttractionListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListPresenterTest.swift; sourceTree = "<group>"; };
 		5F04E96224011BBD000BB14B /* AttractionListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListBuilder.swift; sourceTree = "<group>"; };
 		5F04E96424011EF6000BB14B /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
-		5F835D6B23FD5CEA00C373BA /* turist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F835D6B23FD5CEA00C373BA /* tourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F835D6E23FD5CEA00C373BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F835D7523FD5CEA00C373BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F835D7723FD5CEC00C373BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F835D7A23FD5CEC00C373BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F835D7C23FD5CEC00C373BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F835D8123FD5CEC00C373BA /* turistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F835D8123FD5CEC00C373BA /* touristTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touristTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F835D8523FD5CEC00C373BA /* turistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turistTests.swift; sourceTree = "<group>"; };
 		5F835D8723FD5CEC00C373BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F835DAA23FD5EAE00C373BA /* AttractionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionListInteractor.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		5F84133F23FEDD0000594F98 /* AttractionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionCell.xib; sourceTree = "<group>"; };
 		5F84134323FEE4C600594F98 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5F84134423FEE4C600594F98 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		5FB644DF2401611A00190923 /* turistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB644DF2401611A00190923 /* touristUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = touristUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB644E12401611A00190923 /* turistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turistUITests.swift; sourceTree = "<group>"; };
 		5FB644E32401611A00190923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC2D9CE2400E944004C7FB7 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		5F835D6223FD5CEA00C373BA = {
 			isa = PBXGroup;
 			children = (
-				5F835D6D23FD5CEA00C373BA /* turist */,
+				5F835D6D23FD5CEA00C373BA /* tourist */,
 				5F835D8423FD5CEC00C373BA /* turistTests */,
 				5FB644E02401611A00190923 /* turistUITests */,
 				5F835D6C23FD5CEA00C373BA /* Products */,
@@ -144,14 +144,14 @@
 		5F835D6C23FD5CEA00C373BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F835D6B23FD5CEA00C373BA /* turist.app */,
-				5F835D8123FD5CEC00C373BA /* turistTests.xctest */,
-				5FB644DF2401611A00190923 /* turistUITests.xctest */,
+				5F835D6B23FD5CEA00C373BA /* tourist.app */,
+				5F835D8123FD5CEC00C373BA /* touristTests.xctest */,
+				5FB644DF2401611A00190923 /* touristUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5F835D6D23FD5CEA00C373BA /* turist */ = {
+		5F835D6D23FD5CEA00C373BA /* tourist */ = {
 			isa = PBXGroup;
 			children = (
 				5F84133C23FEDCD100594F98 /* Cells */,
@@ -160,7 +160,7 @@
 				5F835D9F23FD5D0D00C373BA /* Storyboards */,
 				5F835D9E23FD5CFC00C373BA /* SupportFiles */,
 			);
-			path = turist;
+			path = tourist;
 			sourceTree = "<group>";
 		};
 		5F835D8423FD5CEC00C373BA /* turistTests */ = {
@@ -332,9 +332,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F835D6A23FD5CEA00C373BA /* turist */ = {
+		5F835D6A23FD5CEA00C373BA /* tourist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F835D9523FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turist" */;
+			buildConfigurationList = 5F835D9523FD5CED00C373BA /* Build configuration list for PBXNativeTarget "tourist" */;
 			buildPhases = (
 				5F835D6723FD5CEA00C373BA /* Sources */,
 				5F835D6823FD5CEA00C373BA /* Frameworks */,
@@ -344,7 +344,7 @@
 			);
 			dependencies = (
 			);
-			name = turist;
+			name = tourist;
 			packageProductDependencies = (
 				5F84133623FED5A300594F98 /* APIModule */,
 				5F84133823FED78A00594F98 /* Models */,
@@ -352,12 +352,12 @@
 				5F84134823FEE93E00594F98 /* Kingfisher */,
 			);
 			productName = turist;
-			productReference = 5F835D6B23FD5CEA00C373BA /* turist.app */;
+			productReference = 5F835D6B23FD5CEA00C373BA /* tourist.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F835D8023FD5CEC00C373BA /* turistTests */ = {
+		5F835D8023FD5CEC00C373BA /* touristTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F835D9823FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turistTests" */;
+			buildConfigurationList = 5F835D9823FD5CED00C373BA /* Build configuration list for PBXNativeTarget "touristTests" */;
 			buildPhases = (
 				5F835D7D23FD5CEC00C373BA /* Sources */,
 				5F835D7E23FD5CEC00C373BA /* Frameworks */,
@@ -368,14 +368,14 @@
 			dependencies = (
 				5F835D8323FD5CEC00C373BA /* PBXTargetDependency */,
 			);
-			name = turistTests;
+			name = touristTests;
 			productName = turistTests;
-			productReference = 5F835D8123FD5CEC00C373BA /* turistTests.xctest */;
+			productReference = 5F835D8123FD5CEC00C373BA /* touristTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5FB644DE2401611A00190923 /* turistUITests */ = {
+		5FB644DE2401611A00190923 /* touristUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FB644E82401611A00190923 /* Build configuration list for PBXNativeTarget "turistUITests" */;
+			buildConfigurationList = 5FB644E82401611A00190923 /* Build configuration list for PBXNativeTarget "touristUITests" */;
 			buildPhases = (
 				5FB644DB2401611A00190923 /* Sources */,
 				5FB644DC2401611A00190923 /* Frameworks */,
@@ -386,9 +386,9 @@
 			dependencies = (
 				5FB644E52401611A00190923 /* PBXTargetDependency */,
 			);
-			name = turistUITests;
+			name = touristUITests;
 			productName = turistUITests;
-			productReference = 5FB644DF2401611A00190923 /* turistUITests.xctest */;
+			productReference = 5FB644DF2401611A00190923 /* touristUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -414,7 +414,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F835D6623FD5CEA00C373BA /* Build configuration list for PBXProject "turist" */;
+			buildConfigurationList = 5F835D6623FD5CEA00C373BA /* Build configuration list for PBXProject "tourist" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -430,9 +430,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F835D6A23FD5CEA00C373BA /* turist */,
-				5F835D8023FD5CEC00C373BA /* turistTests */,
-				5FB644DE2401611A00190923 /* turistUITests */,
+				5F835D6A23FD5CEA00C373BA /* tourist */,
+				5F835D8023FD5CEC00C373BA /* touristTests */,
+				5FB644DE2401611A00190923 /* touristUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -515,12 +515,12 @@
 /* Begin PBXTargetDependency section */
 		5F835D8323FD5CEC00C373BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5F835D6A23FD5CEA00C373BA /* turist */;
+			target = 5F835D6A23FD5CEA00C373BA /* tourist */;
 			targetProxy = 5F835D8223FD5CEC00C373BA /* PBXContainerItemProxy */;
 		};
 		5FB644E52401611A00190923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5F835D6A23FD5CEA00C373BA /* turist */;
+			target = 5F835D6A23FD5CEA00C373BA /* tourist */;
 			targetProxy = 5FB644E42401611A00190923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -665,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C2GNT69CH;
-				INFOPLIST_FILE = "$(SRCROOT)/turist/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tourist/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C2GNT69CH;
-				INFOPLIST_FILE = "$(SRCROOT)/turist/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tourist/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,7 +714,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/turist.app/turist";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tourist.app/tourist";
 			};
 			name = Debug;
 		};
@@ -735,7 +735,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/turist.app/turist";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tourist.app/tourist";
 			};
 			name = Release;
 		};
@@ -778,7 +778,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F835D6623FD5CEA00C373BA /* Build configuration list for PBXProject "turist" */ = {
+		5F835D6623FD5CEA00C373BA /* Build configuration list for PBXProject "tourist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F835D9323FD5CED00C373BA /* Debug */,
@@ -787,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F835D9523FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turist" */ = {
+		5F835D9523FD5CED00C373BA /* Build configuration list for PBXNativeTarget "tourist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F835D9623FD5CED00C373BA /* Debug */,
@@ -796,7 +796,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F835D9823FD5CED00C373BA /* Build configuration list for PBXNativeTarget "turistTests" */ = {
+		5F835D9823FD5CED00C373BA /* Build configuration list for PBXNativeTarget "touristTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F835D9923FD5CED00C373BA /* Debug */,
@@ -805,7 +805,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FB644E82401611A00190923 /* Build configuration list for PBXNativeTarget "turistUITests" */ = {
+		5FB644E82401611A00190923 /* Build configuration list for PBXNativeTarget "touristUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5FB644E62401611A00190923 /* Debug */,

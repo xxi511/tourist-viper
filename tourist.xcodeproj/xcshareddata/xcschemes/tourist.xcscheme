@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5F835D6A23FD5CEA00C373BA"
-               BuildableName = "turist.app"
-               BlueprintName = "turist"
-               ReferencedContainer = "container:turist.xcodeproj">
+               BuildableName = "tourist.app"
+               BlueprintName = "tourist"
+               ReferencedContainer = "container:tourist.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5F835D8023FD5CEC00C373BA"
-               BuildableName = "turistTests.xctest"
-               BlueprintName = "turistTests"
-               ReferencedContainer = "container:turist.xcodeproj">
+               BuildableName = "touristTests.xctest"
+               BlueprintName = "touristTests"
+               ReferencedContainer = "container:tourist.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5FB644DE2401611A00190923"
-               BuildableName = "turistUITests.xctest"
-               BlueprintName = "turistUITests"
-               ReferencedContainer = "container:turist.xcodeproj">
+               BuildableName = "touristUITests.xctest"
+               BlueprintName = "touristUITests"
+               ReferencedContainer = "container:tourist.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F835D6A23FD5CEA00C373BA"
-            BuildableName = "turist.app"
-            BlueprintName = "turist"
-            ReferencedContainer = "container:turist.xcodeproj">
+            BuildableName = "tourist.app"
+            BlueprintName = "tourist"
+            ReferencedContainer = "container:tourist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F835D6A23FD5CEA00C373BA"
-            BuildableName = "turist.app"
-            BlueprintName = "turist"
-            ReferencedContainer = "container:turist.xcodeproj">
+            BuildableName = "tourist.app"
+            BlueprintName = "tourist"
+            ReferencedContainer = "container:tourist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
