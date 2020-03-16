@@ -11,6 +11,6 @@
       location = "group:Utils">
    </FileRef>
    <FileRef
-      location = "container:/Users/xxi511/Desktop/turist/tourist.xcodeproj">
+      location = "group:tourist.xcodeproj">
    </FileRef>
 </Workspace>
